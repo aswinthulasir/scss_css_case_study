@@ -1,0 +1,24 @@
+$primary:#ff0000;
+$secondary:#ffff;
+
+$brandkit: 18px
+
+
+@mixin common_style{
+    font-family:sans-serif;
+    font-size: 18px;
+}
+
+
+nav{
+    @include common_style($primary)
+}
+
+@media screen  and (max-width: 460px) {
+
+    header{
+        
+        background-color: $secondary;
+        
+    }
+}

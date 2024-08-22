@@ -1,0 +1,17 @@
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  margin-right: 2%;
+}
+
+header {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width: 460px) {
+  header {
+    background-color: white;
+  }
+}/*# sourceMappingURL=app.css.map */
