@@ -1,24 +1,106 @@
-$primary:#ff0000;
-$secondary:#ffff;
-
-$brandkit: 18px
 
 
-@mixin common_style{
-    font-family:sans-serif;
-    font-size: 18px;
+
+
+
+
+
+@mixin bodification{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+
+}
+
+@mixin headings{
+    margin: 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #ff0000ef;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 
+
+body {
+    @include bodification()
+    
+}
+
+header{
+    @include headings()
+}
+
+@mixin navbar{
+    display: flex;
+    font-size: 24px;
+    text-align: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: end;
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
 nav{
-    @include common_style($primary)
+    @include navbar()
+}
+
+@mixin subfile{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 50px;
+    margin-right: 2%;
+}
+
+header{
+    nav{
+        @include subfile()
+    }
 }
 
 @media screen  and (max-width: 460px) {
+    header{
+        nav{
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        
+            }
+        }
 
     header{
-        
-        background-color: $secondary;
+        height: 300px;
+        margin-top: 0;
+        background-color: aliceblue;
         
     }
+
+    a{
+        color: black;
+    }
 }
+
+
+
+a{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    color: $clr_format;
+}
+
+$clr_format: #ffff
